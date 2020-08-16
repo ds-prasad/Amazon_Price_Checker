@@ -18,7 +18,9 @@ def check_price(product_url,desired_price,receiver_id):
 	"""Function to webscrape Amazon page regarding a specific and
 	desired product and alert-mail the user in case of price drop"""
 
-	product_website=requests.get(product_url)
+	browser_info={"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36"}
+
+	product_website=requests.get(product_url,headers=browser_info)
 
 	if product_website.status_code!=200:
 		print("Bad Request!!!")
