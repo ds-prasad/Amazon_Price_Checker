@@ -133,6 +133,7 @@ check_time=input("How frequently you want to check the product:(Enter the number
 check_time=int(check_time)
 check_time=check_time*3600
 
-while(True):													#Forever TRUE statement
+while(True):									#Forever TRUE statement
 	check_price(product_url,desired_price,receiver_id)			#Function calling to check product price frequently
-	time.sleep(check_time)										#Pause the program for certain time
+	print("Price was checked just now!!!")					#Indication of successful price check
+	time.sleep(check_time)							#Pause the program for certain time
